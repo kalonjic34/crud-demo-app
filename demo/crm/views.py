@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def homepage(request):
-    return HttpResponse('This is the home page')
+    return render(request, 'crm/index.html')
 
 def register(request):
-    return HttpResponse('This is the registration page')
+    return render(request,'crm/register.html')
