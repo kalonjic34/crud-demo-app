@@ -4,6 +4,8 @@ from django.http import HttpResponse
 
 from .models import Task
 
+from .forms import TaskForm
+
 def homepage(request):
     return render(request, 'crm/index.html')
 
@@ -18,4 +20,8 @@ def register(request):
     return render(request,'crm/register.html')
 
 def task_form(request):
-    pass
+    form = TaskForm()
+     
+    context = {'TaskForm':form}
+    
+    return render(request, 'crm/task-form.html',context)
