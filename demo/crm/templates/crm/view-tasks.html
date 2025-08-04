@@ -22,6 +22,8 @@
             {{task.description}}
             <br>
             {{task.created}}
+            <br>
+            <a href="{% url "update-task" task.id%}">Update task</a>
     
         {% endfor %}
 
