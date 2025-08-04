@@ -16,3 +16,6 @@ def task(request):
 
 def register(request):
     return render(request,'crm/register.html')
+
+def task_form(request):
+    pass
