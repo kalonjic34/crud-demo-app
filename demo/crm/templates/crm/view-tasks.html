@@ -13,13 +13,20 @@
 
     <hr>
 
-    <br>
-    {{singleTask.title}}
-    <br>
-    {{singleTask.description}}
-    <br>
-    {{singleTask.created}}
-    <br>
+        {% for task in AllTask %}
+            <br>
+            {{task.id}}
+            <br>
+            {{task.title}}
+            <br>
+            {{task.description}}
+            <br>
+            {{task.created}}
+    
+        {% endfor %}
+
+        <br>
+
     
     {% endblock %}
 </body>
