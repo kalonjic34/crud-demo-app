@@ -1,11 +1,7 @@
+from django import forms
+from .models import Task
 
-from django.forms import ModelForm
-from . models import Task
-
-class TaskForm(ModelForm):
-    class Metal:
+class TaskForm(forms.ModelForm):
+    class Meta:
         model = Task
-        fields = '__all__'
-        
-    
-        
+        fields = '__all__'  
