@@ -9,10 +9,22 @@
 <body>
     {% block content %}
     
-    <h3>Create your task here</h3>
+        <h3>Create your task here</h3>
 
-    <p>Task form</p>
+        <p>Task form</p>
 
+        <hr>
+
+        <form method="POST", autocomplete="off">
+
+            {% csrf_token %}
+
+            {{ TaskForm.as_p}}
+            
+
+            <input type="submit" value='Submit'/>
+
+    </form>
     {% endblock %}
 </body>
 </html>
