@@ -57,3 +57,17 @@ def update_task(request, pk):
        context = {'UpdateTask':form}
        
        return render(request, 'crm/update-task.html',context)
+   
+   
+# delete tasks
+
+def delete_task(request, pk):
+    task = Task.objects.get(id=pk)
+    
+    if request.method == 'POST':
+        
+        task.delete()
+        
+        return redirect('view-tasks')
+    
+    return render(request, 'crm/delete-task.html')
