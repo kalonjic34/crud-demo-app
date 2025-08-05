@@ -1,6 +1,5 @@
 {% extends "crm/base.html" %}
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,6 +12,17 @@
 
     <p>This is where you can create your account!</p>
 
+    <hr>
+
+    <form method="POST", autocomplete="off">
+ 
+            {% csrf_token %}
+
+            {{RegistratonForm.as_p}}
+
+            <input type="submit" value='Create Account'/>
+
+    </form>
     {% endblock %}
 </body>
 </html>
