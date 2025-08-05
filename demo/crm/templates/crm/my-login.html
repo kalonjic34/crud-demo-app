@@ -1,0 +1,28 @@
+{% extends "crm/base.html" %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    {% block content %}
+    
+    <h3>Login here!</h3>
+
+    <p>This is where you can login to your account!</p>
+
+    <hr>
+
+    <form method="POST", autocomplete="off">
+ 
+            {% csrf_token %}
+
+            {{LoginForm.as_p}}
+
+            <input type="submit" value='Login'/>
+
+    </form>
+    {% endblock %}
+</body>
+</html>
